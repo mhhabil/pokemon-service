@@ -40,12 +40,12 @@ $ npm run test:e2e
 <p>POST /users/login</p>
 
 # pokemons
-POST /pokemons (Add new pokemon)/n
-POST /pokemons/get-pokemons (Get all pokemons with custom parameters e.g: sort, pokemon type and pokemon name)
-GET /pokemons/:id (Get pokemon by id)
-PATCH /pokemons/:id (Update pokemon by id)
-DELETE /pokemons/:id (Delete pokemon by id)
-POST /pokemons/set-captured/:id (Set flag whether the pokemon has been captured or not)
+<p>POST /pokemons (Add new pokemon)</p>
+<p>POST /pokemons/get-pokemons (Get all pokemons with custom parameters e.g: sort, pokemon type and pokemon name)</p>
+<p>GET /pokemons/:id (Get pokemon by id)</p>
+<p>PATCH /pokemons/:id (Update pokemon by id)</p>
+<p>DELETE /pokemons/:id (Delete pokemon by id)</p>
+<p>POST /pokemons/set-captured/:id (Set flag whether the pokemon has been captured or not)</p>
 
 
 ## License
