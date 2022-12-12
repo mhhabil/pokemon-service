@@ -40,12 +40,36 @@ Request: {
 }
 
 ## pokemons
-<p>POST /pokemons (Add new pokemon)</p>
-<p>POST /pokemons/get-pokemons (Get all pokemons with custom parameters e.g: sort, pokemon type and pokemon name)</p>
-<p>GET /pokemons/:id (Get pokemon by id)</p>
-<p>PATCH /pokemons/:id (Update pokemon by id)</p>
-<p>DELETE /pokemons/:id (Delete pokemon by id)</p>
-<p>POST /pokemons/set-captured/:id (Set flag whether the pokemon has been captured or not)</p>
+#### POST /pokemons (Add new pokemon)
+```json 
+  {
+    "name": "Bulbasaur",
+    "alias": "Grass Flying",
+    "category": [
+      "FLYING",
+      "PSYCHIC",
+      "GRASS"
+    ],
+    "catched": true,
+    "image": "",
+    "detail": {
+      "description": "Grass pokemon with psychic power.",
+      "weight": "250",
+      "height": "4"
+    },
+    "stats": {
+      "hp": 110,
+      "attack": 90,
+      "defense": 75,
+      "speed": 59
+    }
+  } 
+```
+#### POST /pokemons/get-pokemons (Get all pokemons with custom parameters e.g: sort, pokemon type and pokemon name)
+#### GET /pokemons/:id (Get pokemon by id)
+#### PATCH /pokemons/:id (Update pokemon by id)
+#### DELETE /pokemons/:id (Delete pokemon by id)
+#### POST /pokemons/set-captured/:id (Set flag whether the pokemon has been captured or not)
 
 
 ## License
