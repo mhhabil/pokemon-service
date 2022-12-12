@@ -1,30 +1,10 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"></a>
 </p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Pokemon API with NESTJS and MongoDB as persistent database, MongoDB used because it is easier to store and manipulate data with complex JSON-like object like pokemon. In MongoDB, the data is stored in documents using JSON-like structure to represent and interact with data.
 
 ## Installation
 
@@ -45,28 +25,104 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+## API List
+## users
+#### POST /users/register
+`http://127.0.0.1:3120/users/register`
+```json 
+  {
+    "username": "mhhabil",
+    "password": "mhhabil123"
+  }
+```
+  
+#### POST /users/login
+`http://127.0.0.1:3120/users/login`
+```json 
+  {
+    "username": "mhhabil",
+    "password": "mhhabil123"
+  }
 ```
 
-## Support
+## pokemons
+#### POST /pokemons (Add new pokemon)
+`http://127.0.0.1:3120/pokemons`
+```json 
+  {
+    "name": "Bulbasaur",
+    "alias": "Grass Flying",
+    "category": [
+      "FLYING",
+      "PSYCHIC",
+      "GRASS"
+    ],
+    "catched": true,
+    "image": "",
+    "detail": {
+      "description": "Grass pokemon with psychic power.",
+      "weight": "250",
+      "height": "4"
+    },
+    "stats": {
+      "hp": 110,
+      "attack": 90,
+      "defense": 75,
+      "speed": 59
+    }
+  } 
+```
+#### POST /pokemons/get-pokemons (Show all pokemons with custom parameters e.g: sortBy (id or name), sort direction, pokemon type and pokemon name)
+`http://127.0.0.1:3120/pokemons/get-pokemons` 
+```json 
+  {
+    "sortBy": "id",
+    "sort": "desc",
+    "name": "",
+    "typeFilter": [
+        "ELECTRIC",
+        "PSYCHIC"
+    ]
+}
+```
+#### GET /pokemons/:id (Get pokemon by id)
+`http://127.0.0.1:3120/pokemons/{{id}}`
+#### PATCH /pokemons/:id (Update pokemon by id)
+`http://127.0.0.1:3120/pokemons/{{id}}`
+```json
+  {
+    "name": "Pikachu",
+    "alias": "Lightning Bolt",
+    "category": [
+        "ELECTRIC",
+        "PSYCHIC",
+        "YELLOW"
+    ],
+    "catched": true,
+    "image": "",
+    "detail": {
+        "description": "Grass pokemon with psychic power.",
+        "weight": "250",
+        "height": "4"
+    },
+    "stats": {
+        "hp": 110,
+        "attack": 90,
+        "defense": 75,
+        "speed": 59
+    }
+}
+```
+#### DELETE /pokemons/:id (Delete pokemon by id)
+`http://127.0.0.1:3120/pokemons/{{id}}`
+#### POST /pokemons/set-captured/:id (Set flag whether the pokemon has been captured or not)
+`http://127.0.0.1:3120/pokemons/set-captured/{{id}}`
+```json
+  {
+    "isCaptured": true
+}
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
