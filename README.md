@@ -28,10 +28,9 @@ $ npm run start:prod
 ## API List
 # users
 <p>POST /users/register</p>
-```json{
-    "username": "amalia",
-    "password": "kopinikmatgakbikinkembung"
-}```
+```json
+Here goes your json object definition
+```
 <p>POST /users/login</p>
 
 # pokemons
