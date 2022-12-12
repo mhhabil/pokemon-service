@@ -28,13 +28,15 @@ $ npm run start:prod
 ## API List
 # users
 <p>POST /users/register</p>
-```bash
-  {
+Request: {
     "username": "mhhabil",
     "password": "mhhabil123"
   }
-```
 <p>POST /users/login</p>
+Request: {
+    "username": "mhhabil",
+    "password": "mhhabil123"
+}
 
 # pokemons
 <p>POST /pokemons (Add new pokemon)</p>
