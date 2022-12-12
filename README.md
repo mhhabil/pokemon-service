@@ -4,7 +4,7 @@
 
 ## Description
 
-Pokemon API
+Pokemon API with NESTJS and MongoDB as persistent database, MongoDB used because it is easier to store and manipulate data with complex JSON-like object like pokemon. In MongoDB, the data is stored in documents using JSON-like structure to represent and interact with data.
 
 ## Installation
 
@@ -29,7 +29,6 @@ $ npm run start:prod
 ## users
 #### POST /users/register
 `http://127.0.0.1:3120/users/register`
-Request Body: 
 ```json 
   {
     "username": "mhhabil",
@@ -39,7 +38,6 @@ Request Body:
   
 #### POST /users/login
 `http://127.0.0.1:3120/users/login`
-Request Body:
 ```json 
   {
     "username": "mhhabil",
@@ -50,7 +48,6 @@ Request Body:
 ## pokemons
 #### POST /pokemons (Add new pokemon)
 `http://127.0.0.1:3120/pokemons`
-Request Body:
 ```json 
   {
     "name": "Bulbasaur",
@@ -76,8 +73,7 @@ Request Body:
   } 
 ```
 #### POST /pokemons/get-pokemons (Show all pokemons with custom parameters e.g: sort, pokemon type and pokemon name)
-`http://127.0.0.1:3120/pokemons/get-pokemons`
-Request Body: 
+`http://127.0.0.1:3120/pokemons/get-pokemons` 
 ```json 
   {
     "sort": "asc",
@@ -92,7 +88,6 @@ Request Body:
 `http://127.0.0.1:3120/pokemons/{{id}}`
 #### PATCH /pokemons/:id (Update pokemon by id)
 `http://127.0.0.1:3120/pokemons/{{id}}`
-Request Body:
 ```json
   {
     "name": "Pikachu",
@@ -121,7 +116,6 @@ Request Body:
 `http://127.0.0.1:3120/pokemons/{{id}}`
 #### POST /pokemons/set-captured/:id (Set flag whether the pokemon has been captured or not)
 `http://127.0.0.1:3120/pokemons/set-captured/{{id}}`
-Request Body:
 ```json
   {
     "isCaptured": true
