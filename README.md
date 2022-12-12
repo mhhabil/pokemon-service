@@ -28,8 +28,11 @@ $ npm run start:prod
 ## API List
 # users
 <p>POST /users/register</p>
-```json
-Here goes your json object definition
+```bash
+  {
+    "username": "mhhabil",
+    "password": "mhhabil123"
+  }
 ```
 <p>POST /users/login</p>
 
