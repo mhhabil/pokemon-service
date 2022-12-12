@@ -13,7 +13,7 @@ export const PokemonSchema = new mongoose.Schema(
       type: [String],
       required: true,
     },
-    catched: {
+    captured: {
       type: Boolean,
       required: true,
     },
@@ -59,7 +59,7 @@ export interface IPokemon extends mongoose.Document {
   name: string;
   alias: string;
   category: Array<string>;
-  catched: boolean;
+  captured: boolean;
   image: string;
   detail: IDetail;
   stats: IStats;

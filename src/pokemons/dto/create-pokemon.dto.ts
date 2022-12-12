@@ -15,7 +15,7 @@ export interface ICreatePokemonDto {
   name: string;
   alias: string;
   category: Array<string>;
-  catched: boolean;
+  captured: boolean;
   image: string;
   detail: IDetail;
   stats: IStats;
@@ -25,7 +25,7 @@ export class CreatePokemonDto {
   name: string;
   alias: string;
   category: Array<string>;
-  catched: boolean;
+  captured: boolean;
   image: string;
   detail: IDetail;
   stats: IStats;
@@ -34,7 +34,7 @@ export class CreatePokemonDto {
     this.name = req.name;
     this.alias = req.alias;
     this.category = req.category;
-    this.catched = req.catched;
+    this.captured = req.captured;
     this.image = req.image;
     this.detail = req.detail;
     this.stats = req.stats;

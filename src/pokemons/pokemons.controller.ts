@@ -49,8 +49,8 @@ export class PokemonsController {
   }
 
   @UseGuards(AuthenticatedGuard)
-  @Post('set-catched/:id')
-  setCatched(@Param('id') id: string, @Body('isCatched') isCatched: boolean) {
-    return this.pokemonsService.setCatched(id, isCatched);
+  @Post('set-captured/:id')
+  setCatched(@Param('id') id: string, @Body('isCaptured') isCaptured: boolean) {
+    return this.pokemonsService.setCatched(id, isCaptured);
   }
 }
