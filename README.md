@@ -36,8 +36,8 @@ $ npm run test:e2e
 ```
 ## API List
 # users
-POST /users/register
-POST /users/login
+<p>POST /users/register</p>
+<p>POST /users/login</p>
 
 # pokemons
 POST /pokemons (Add new pokemon)
