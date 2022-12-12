@@ -72,16 +72,17 @@ $ npm run start:prod
     }
   } 
 ```
-#### POST /pokemons/get-pokemons (Show all pokemons with custom parameters e.g: sort, pokemon type and pokemon name)
+#### POST /pokemons/get-pokemons (Show all pokemons with custom parameters e.g: sortBy (id or name), sort direction, pokemon type and pokemon name)
 `http://127.0.0.1:3120/pokemons/get-pokemons` 
 ```json 
   {
-    "sort": "asc",
+    "sortBy": "id",
+    "sort": "desc",
+    "name": "",
     "typeFilter": [
-        "GRASS",
-        "ICE"
-    ],
-    "name": "bee"
+        "ELECTRIC",
+        "PSYCHIC"
+    ]
 }
 ```
 #### GET /pokemons/:id (Get pokemon by id)
