@@ -40,7 +40,7 @@ $ npm run test:e2e
 <p>POST /users/login</p>
 
 # pokemons
-POST /pokemons (Add new pokemon)
+POST /pokemons (Add new pokemon)/n
 POST /pokemons/get-pokemons (Get all pokemons with custom parameters e.g: sort, pokemon type and pokemon name)
 GET /pokemons/:id (Get pokemon by id)
 PATCH /pokemons/:id (Update pokemon by id)
