@@ -26,19 +26,20 @@ $ npm run start:prod
 ```
 
 ## API List
-# users
-<p>POST /users/register</p>
+## users
+#### POST /users/register
 Request: {
     "username": "mhhabil",
     "password": "mhhabil123"
   }
-<p>POST /users/login</p>
+  
+#### POST /users/login
 Request: {
     "username": "mhhabil",
     "password": "mhhabil123"
 }
 
-# pokemons
+## pokemons
 <p>POST /pokemons (Add new pokemon)</p>
 <p>POST /pokemons/get-pokemons (Get all pokemons with custom parameters e.g: sort, pokemon type and pokemon name)</p>
 <p>GET /pokemons/:id (Get pokemon by id)</p>
