@@ -28,7 +28,7 @@ $ npm run start:prod
 ## API List
 # users
 <p>POST /users/register</p>
-```{
+```json{
     "username": "amalia",
     "password": "kopinikmatgakbikinkembung"
 }```
