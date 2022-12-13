@@ -15,7 +15,7 @@ $ npm install
 #### Add .env file on root of the project (copy .env.example)
 `MONGO_DB_URL=mongodb+srv://<username>:<password>:@cluster0.6lqkbzi.mongodb.net/?retryWrites=true&w=majority
 `
-Change MONGO_DB_URL to your MongoDB (Cloud or local)
+#### Change MONGO_DB_URL to your MongoDB (Cloud or local)
 
 ## Running the app
 
